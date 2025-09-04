@@ -23,6 +23,31 @@
   <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
   <button id="addQuoteBtn">Add Quote</button>
 
+  <section id="syncControls" style="margin-top:1rem;">
+  <h2>Sync</h2>
+  <button id="syncNow">Sync Now</button>
+  <label style="margin-left:.75rem;">
+    <input type="checkbox" id="autoSync" checked>
+    Auto-sync every 30s
+  </label>
+  <div id="syncStatus" aria-live="polite" style="margin-top:.5rem;"></div>
+</section>
+
+<!-- Simple conflict modal -->
+<div id="conflictModal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="conflictTitle"
+     style="position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; align-items:center; justify-content:center;">
+  <div class="modal-content" style="background:#fff; padding:1rem; max-width:600px; width:90%; border-radius:8px;">
+    <h3 id="conflictTitle">Resolve Conflicts</h3>
+    <p>Select which version you want to keep for each conflicting quote.</p>
+    <div id="conflictList" style="max-height:50vh; overflow:auto; margin:.75rem 0;"></div>
+    <div style="display:flex; gap:.5rem; justify-content:flex-end;">
+      <button id="applyResolutions">Apply</button>
+      <button id="closeConflictModal">Close</button>
+    </div>
+  </div>
+</div>
+
+
   <hr>
   <!-- Export & Import controls -->
   <button id="exportBtn">Export Quotes</button>
