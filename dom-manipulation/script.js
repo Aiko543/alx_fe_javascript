@@ -173,7 +173,7 @@ async function postQuoteToServer(quote) {
   }
 }
 
-async function syncWithServer() {
+async function syncQuotes() {
   try {
     const serverQuotes = await fetchQuotesFromServer();
     // Conflict resolution: server wins
