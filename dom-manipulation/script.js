@@ -32,24 +32,7 @@ function showRandomQuote() {
 }
 
 // --- Function to dynamically create the Add Quote form ---
-function createAddQuoteForm() {
-    const formContainer = document.createElement("div");
-    formContainer.innerHTML = `
-        <h2>Add a New Quote</h2>
-        <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
-        <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
-        <button id="addQuoteBtn">Add Quote</button>
-        <hr>
-        <button id="exportBtn">Export Quotes</button>
-        <input type="file" id="importFile" accept=".json" />
-    `;
-    document.body.appendChild(formContainer);
 
-    // Event listeners
-    document.getElementById("addQuoteBtn").addEventListener("click", addQuote);
-    document.getElementById("exportBtn").addEventListener("click", exportToJsonFile);
-    document.getElementById("importFile").addEventListener("change", importFromJsonFile);
-}
 
 // --- Add new quote ---
 function addQuote() {
