@@ -181,7 +181,7 @@ async function syncQuotes() {
     saveQuotes();
     populateCategories();
     showRandomQuote();
-    console.log("Synced with server successfully.");
+    console.log("Quotes synced with server!");
   } catch (err) {
     console.error("Error syncing with server:", err);
   }
